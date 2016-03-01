@@ -1,0 +1,22 @@
+{
+  "name": "devopscenterregression",
+  "version": "1.0.0",
+  "description": "",
+  "main": "using-jquery-for-ajax.js",
+  "dependencies": {
+    "axios": "^0.8.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+    "mocha": "^2.4.4",
+    "v1sdk": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "request": "^2.69.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "author": "sma",
+  "license": "ISC"
+}
