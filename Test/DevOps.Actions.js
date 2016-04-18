@@ -5,8 +5,10 @@ var v1sdk = require('v1sdk');
 var util = require('util');
 
 var v1 = base.v1;
-//var devOpsCenterApiBaseUrl = 'http://localhost/VersionOne/DevOpsCenter.mvc/';
-
+var username = base.username;
+var password = base.password;
+var baseUrl = base.protocol + '//' + base.hostname + '/' + base.instance;
+var devOpsCenterApiBaseUrl = baseUrl + '/DevOpsCenter.mvc/';
 
 var DevopsCenter = {
 	CreateAction: function(name, assetType, endpointUrl, label, description){
@@ -29,7 +31,7 @@ var DevopsCenter = {
 	DeleteAction: function(externalActionOid) {
 		return v1.executeOperation('ExternalAction', externalActionOid, 'Delete');
 	},
-	/*InvokeAction: function(externalActionOid, triggeringAssetOid, name, number, description, status) {
+	InvokeAction: function(externalActionOid, triggeringAssetOid, name, number, description, status) {
 		name = name || "Asset";
 		number = number || "A-00001";
 		description = description || null;
@@ -51,20 +53,34 @@ var DevopsCenter = {
 			}
 		};
 
-		return axios.post(url, data, {auth: {username: base.username, password: base.password}});
-	}*/
-	InvokeAction: function(assetType, externalActionOid, triggeringAssetOid) {
+		return axios.post(url, data, {auth: {username: username, password: password}});
+	},
+	CreateActionInvocationByAssetAndAction: function(assetType, externalActionOid, triggeringAssetOid) {
 		assetType = assetType || 'Story';
 		externalActionOid = externalActionOid || 2231;
 		triggeringAssetOid = triggeringAssetOid || 1187;
 
-		var invoker = assetType + ":" + triggeringAssetOid;
 		var data = {
-			"InvokedOn": triggeringAssetOid,
-			"CausedBy": externalActionOid
+			"InvokedOn": assetType + ":" + triggeringAssetOid,
+			"CausedBy": "ExternalAction:" + externalActionOid,
+			"Sent": ""
 		};
+		return v1.create('ExternalActionInvocation', data);		
+	},
+	GetCountOfExternalActionInvocationInvokedOnExternalAction: function(qType, relation, assetType, triggeringAssetOid) {
+		assetType = assetType || 'Story';
+		triggeringAssetOid = triggeringAssetOid || 1187;
+		var triggerAsset = assetType + ':' + triggeringAssetOid;
 
-		return v1.executeOperation('ExternalActionInvocation', assetType, data);
+		var url = baseUrl + util.format(
+				'/rest-1.v1/Data/ExternalActionInvocation?where=InvokedOn=%27triggerAsset%27', triggerAsset);
+
+		return axios.get(url);
+	},
+	ReadActionInvocationCausedByAssetType: function(assetType) {
+		assetType = assetType || 'Story';
+		
+		return v1.query('ExternalActionInvocation', assetType);
 	}
 };
 
@@ -101,8 +117,11 @@ DevopsCenter.InvokeAction(externalActionOid, 'Story:1057')
 })
 .catch(errorHandler);*/
 
+//console.log(devOpsCenterApiBaseUrl);
+
 module.exports = {
 	DevopsCenter: DevopsCenter,
 	errorHandler: errorHandler
 };
 }());
+
