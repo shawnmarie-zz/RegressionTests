@@ -35,26 +35,26 @@ To begin manual regression testing, DeliveryStream must be enabled with a valid 
 
 If successful, you should see output similar to this:
 
-> Create new action for the Project asset type with Trigger Type Pipeline   
-> Create new action for the Project asset type with Trigger Type Task 
-> Create new action for the Project asset type with Trigger Type Webhook 
-> Create new action for the Project asset type with Trigger Type Canvas 
-> Create new action for the Portfolio Item asset type with Trigger Type Pipeline 
-> Create new action for the Portfolio Item asset type with Trigger Type Task 
-> Create new action for the Portfolio Item asset type with Trigger Type Webhook 
-> Create new action for the Portfolio Item asset type with Trigger Type Canvas 
-> Create new action for the Story asset type with Trigger Type Pipeline 
-> Create new action for the Story asset type with Trigger Type Task 
-> Create new action for the Story asset type with Trigger Type Webhook 
-> Create new action for the Story asset type with Trigger Type Canvas 
-> Create new action for the Defect asset type with Trigger Type Pipeline 
-> Create new action for the Defect asset type with Trigger Type Task 
-> Create new action for the Defect asset type with Trigger Type Webhook 
-> Create new action for the Defect asset type with Trigger Type Canvas 
-> Create new action for the TestSet asset type with Trigger Type Pipeline 
-> Create new action for the TestSet asset type with Trigger Type Task 
-> Create new action for the TestSet asset type with Trigger Type Webhook 
-> Create new action for the TestSet asset type with Trigger Type Canvas 	
+> Create new action for the Project asset type with Trigger Type Pipeline     
+> Create new action for the Project asset type with Trigger Type Task   
+> Create new action for the Project asset type with Trigger Type Webhook   
+> Create new action for the Project asset type with Trigger Type Canvas   
+> Create new action for the Portfolio Item asset type with Trigger Type Pipeline   
+> Create new action for the Portfolio Item asset type with Trigger Type Task   
+> Create new action for the Portfolio Item asset type with Trigger Type Webhook   
+> Create new action for the Portfolio Item asset type with Trigger Type Canvas   
+> Create new action for the Story asset type with Trigger Type Pipeline   
+> Create new action for the Story asset type with Trigger Type Task   
+> Create new action for the Story asset type with Trigger Type Webhook   
+> Create new action for the Story asset type with Trigger Type Canvas   
+> Create new action for the Defect asset type with Trigger Type Pipeline   
+> Create new action for the Defect asset type with Trigger Type Task   
+> Create new action for the Defect asset type with Trigger Type Webhook   
+> Create new action for the Defect asset type with Trigger Type Canvas   
+> Create new action for the TestSet asset type with Trigger Type Pipeline   
+> Create new action for the TestSet asset type with Trigger Type Task   
+> Create new action for the TestSet asset type with Trigger Type Webhook   
+> Create new action for the TestSet asset type with Trigger Type Canvas 	  
 > Created new ExternalAction: 7851 	
 >Created new ExternalAction: 7853 	
 >Created new ExternalAction: 7855 	
