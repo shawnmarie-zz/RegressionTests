@@ -1,5 +1,5 @@
 
-This repo currently contains files related to regression testing **DeliveryStream** for **VersionOne**.
+This repo currently contains files related to testing and regression testing **DeliveryStream** for **VersionOne**.
 
 After cloning this repo you will need to install the following (if you do not have them already):
 ****It is assumed that you already have node installed and working.****
@@ -35,37 +35,38 @@ To begin manual regression testing, DeliveryStream must be enabled with a valid 
 
 If successful, you should see output similar to this:
 
-> Create new action for the Project asset type with Trigger Type
-> Pipeline Create new action for the Project asset type with Trigger
-> Type Task Create new action for the Project asset type with Trigger
-> Type Webhook Create new action for the Project asset type with Trigger
-> Type Canvas Create new action for the Portfolio Item asset type with
-> Trigger Type Pipeline Create new action for the Portfolio Item asset
-> type with Trigger Type Task Create new action for the Portfolio Item
-> asset type with Trigger Type Webhook Create new action for the
-> Portfolio Item asset type with Trigger Type Canvas Create new action
-> for the Story asset type with Trigger Type Pipeline Create new action
-> for the Story asset type with Trigger Type Task Create new action for
-> the Story asset type with Trigger Type Webhook Create new action for
-> the Story asset type with Trigger Type Canvas Create new action for
-> the Defect asset type with Trigger Type Pipeline Create new action for
-> the Defect asset type with Trigger Type Task Create new action for the
-> Defect asset type with Trigger Type Webhook Create new action for the
-> Defect asset type with Trigger Type Canvas Create new action for the
-> TestSet asset type with Trigger Type Pipeline Create new action for
-> the TestSet asset type with Trigger Type Task Create new action for
-> the TestSet asset type with Trigger Type Webhook Create new action for
-> the TestSet asset type with Trigger Type Canvas 	Created new
-> ExternalAction: 7851 	Created new ExternalAction: 7852 	Created new
-> ExternalAction: 7853 	Created new ExternalAction: 7855 	Created new
-> ExternalAction: 7854 	Created new ExternalAction: 7856 	Created new
-> ExternalAction: 7857 	Created new ExternalAction: 7858 	Created new
-> ExternalAction: 7859 	Created new ExternalAction: 7860 	Created new
-> ExternalAction: 7861 	Created new ExternalAction: 7862 	Created new
-> ExternalAction: 7863 	Created new ExternalAction: 7864 	Created new
-> ExternalAction: 7865 	Created new ExternalAction: 7866 	Created new
-> ExternalAction: 7867 	Created new ExternalAction: 7868 	Created new
-> ExternalAction: 7869 	Created new ExternalAction: 7870
+> Create new action for the Project asset type with Trigger Type Pipeline   
+> Create new action for the Project asset type with Trigger Type Task 
+> Create new action for the Project asset type with Trigger Type Webhook 
+> Create new action for the Project asset type with Trigger Type Canvas 
+> Create new action for the Portfolio Item asset type with Trigger Type Pipeline 
+> Create new action for the Portfolio Item asset type with Trigger Type Task 
+> Create new action for the Portfolio Item asset type with Trigger Type Webhook 
+> Create new action for the Portfolio Item asset type with Trigger Type Canvas 
+> Create new action for the Story asset type with Trigger Type Pipeline 
+> Create new action for the Story asset type with Trigger Type Task 
+> Create new action for the Story asset type with Trigger Type Webhook 
+> Create new action for the Story asset type with Trigger Type Canvas 
+> Create new action for the Defect asset type with Trigger Type Pipeline 
+> Create new action for the Defect asset type with Trigger Type Task 
+> Create new action for the Defect asset type with Trigger Type Webhook 
+> Create new action for the Defect asset type with Trigger Type Canvas 
+> Create new action for the TestSet asset type with Trigger Type Pipeline 
+> Create new action for the TestSet asset type with Trigger Type Task 
+> Create new action for the TestSet asset type with Trigger Type Webhook 
+> Create new action for the TestSet asset type with Trigger Type Canvas 	
+> Created new ExternalAction: 7851 	
+>Created new ExternalAction: 7853 	
+>Created new ExternalAction: 7855 	
+>Created new ExternalAction: 7854 	
+>Created new ExternalAction: 7857 	
+>Created new ExternalAction: 7859 	
+>Created new ExternalAction: 7861 	
+>Created new ExternalAction: 7863 	
+>Created new ExternalAction: 7865 	
+>Created new ExternalAction: 7867 	
+>Created new ExternalAction: 7869 	
+>Created new ExternalAction: 7870
 
 	
 And inspecting a browser refreshed DeliveryStream Admin page should yield a grid filled with actions in each Asset Type.
