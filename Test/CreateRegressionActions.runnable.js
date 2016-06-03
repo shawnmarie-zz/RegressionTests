@@ -48,7 +48,7 @@ function typeAsset(asset) {
 
 //Project External Actions
 console.log("Create new action for the Project asset type with Trigger Type Pipeline");
-dc.CreateAction(namePipeline, 'Scope', triggerTypePipeline, payloadPipeline, descriptionPipeline).then(function(asset) {
+dc.CreateAction(namePipeline, assetType, triggerTypePipeline, payloadPipeline, descriptionPipeline).then(function(asset) {
 	var id = momentlessId(asset);
 	console.log("\tCreated new ExternalAction: " + id);
 });

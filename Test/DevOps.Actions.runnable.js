@@ -113,47 +113,47 @@ var errorHandler = function(error) {
 };
 
 var externalActionOid = 1222;
-var name;
+var name = "Pipeline for Regression by SMA";
 var number;
 var assetType = "Story";
-var triggerType;
-var triggeringAssetOid = 1184;
-var payload;
-var description;
+var triggerType = 'TriggerType:240';
+var triggeringAssetOid = 2214;
+var payload = '{"definition":"Deploy to Staging","project":"test_project","group":"master"}';
+var description = "This was created to test starting a pipeline.";
 var status;
 
 
-/*DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
+DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
 .then(function(result) {
 	console.log(result);
 })
-.catch(errorHandler);*/
+.catch(errorHandler);
 
 
-var checkForData = function(result) {
-	console.log('checkForDAta', result.data[0].length === 0);
-	return result.data[0].length === 0 ? 
-	new Promise(function(resolve, reject){ reject("Error") }) : 
-	new Promise(function(resolve, reject){ resolve(result.data[0]) });
-}
+// var checkForData = function(result) {
+// 	console.log('checkForDAta', result.data[0].length === 0);
+// 	return result.data[0].length === 0 ? 
+// 	new Promise(function(resolve, reject){ reject("Error") }) : 
+// 	new Promise(function(resolve, reject){ resolve(result.data[0]) });
+// }
 
-var getExternalActionOidToken = function(data) {
-	return new Promise(function(resolve, reject){ resolve(data[0]._oid) });
-}
+// var getExternalActionOidToken = function(data) {
+// 	return new Promise(function(resolve, reject){ resolve(data[0]._oid) });
+// }
 
-var invokeExternalAction = function(externalActionOidToken) {
-	new Promise(function(resolve, reject){ resolve(DevopsCenter.InvokeAction(externalActionOidToken, 'Story:1240')) });
-}
+// var invokeExternalAction = function(externalActionOidToken) {
+// 	new Promise(function(resolve, reject){ resolve(DevopsCenter.InvokeAction(externalActionOidToken, 'Story:1240')) });
+// }
 
-var invokeActionSuccess = function(stuff) {
-	console.log('we invoked the action')
-}
+// var invokeActionSuccess = function(stuff) {
+// 	console.log('we invoked the action')
+// }
 
-DevopsCenter.SelectExternalActionByValidForAssetType(assetType)
-.then(checkForData)
-.then(getExternalActionOidToken)
-.then(invokeExternalAction)
-.then(invokeActionSuccess);
+// DevopsCenter.SelectExternalActionByValidForAssetType(assetType)
+// .then(checkForData)
+// .then(getExternalActionOidToken)
+// .then(invokeExternalAction)
+// .then(invokeActionSuccess);
 // console.log('Protocol: ' + protocol);
 // console.log('BaseUrl: ' + baseUrl);
 // DevopsCenter.InvokeAction(externalActionOid, 'Epic:1205')

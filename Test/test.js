@@ -47,9 +47,9 @@ describe('External Actions: ', function() {
 			it('it should contain invocation history', function() {
 				return dc.CreateActionInvocationByAssetAndAction(assetType, id, triggerOid).should.eventually.have.property('status', 200);
 			});
-			it('it should then be deletable', function() {
-				return dc.DeleteAction(id).should.eventually.have.property('status', 200);
-			});
+			// it('it should then be deletable', function() {
+			// 	return dc.DeleteAction(id).should.eventually.have.property('status', 200);
+			// });
 		});
 		describe('\n\tCreate new action for the Defect asset type', function() {
 			var id;
@@ -66,9 +66,9 @@ describe('External Actions: ', function() {
 			it('it should contain invocation history', function() {
 				return dc.CreateActionInvocationByAssetAndAction(assetType, id, triggerOid).should.eventually.have.property('status', 200);
 			});
-			it('it should then be deletable', function() {
-				return dc.DeleteAction(id).should.eventually.have.property('status', 200);
-			});
+			// it('it should then be deletable', function() {
+			// 	return dc.DeleteAction(id).should.eventually.have.property('status', 200);
+			// });
 		});
 		describe('\n\tCreate new action for the Portfolio Item asset type', function() {
 			var id;
@@ -85,9 +85,9 @@ describe('External Actions: ', function() {
 			it('it should contain invocation history', function() {
 				return dc.CreateActionInvocationByAssetAndAction(assetType, id, triggerOid).should.eventually.have.property('status', 200);
 			});
-			it('it should then be deletable', function() {
-				return dc.DeleteAction(id).should.eventually.have.property('status', 200);
-			});
+			// it('it should then be deletable', function() {
+			// 	return dc.DeleteAction(id).should.eventually.have.property('status', 200);
+			// });
 		});
 		describe('\n\tCreate new action for the Project asset type', function() {
 			var id;
@@ -104,9 +104,9 @@ describe('External Actions: ', function() {
 			it('it should contain invocation history', function() {
 				return dc.CreateActionInvocationByAssetAndAction(assetType, id, triggerOid).should.eventually.have.property('status', 200);
 			});
-			it('it should then be deletable', function() {
-				return dc.DeleteAction(id).should.eventually.have.property('status', 200);
-			});
+			// it('it should then be deletable', function() {
+			// 	return dc.DeleteAction(id).should.eventually.have.property('status', 200);
+			// });
 		});
 	});
 	/*describe('Sad Path tests - ', function() {

@@ -5,25 +5,27 @@ var v1sdk = require('v1sdk');
 var util = require('util');
 
 var v1 = base.v1;
+var headerObj = base.headerObj;
 var username = base.username;
 var password = base.password;
-var baseUrl = base.protocol + '//' + base.hostname + '/' + base.instance;
-var devOpsCenterApiBaseUrl = baseUrl + '/DevOpsCenter.mvc/';
+var protocol = base.protocol + '://';
+var baseUrl = protocol + base.hostname + '/' + base.instance;
+var devOpsCenterApiBaseUrl = baseUrl + '/DeliveryStream.mvc/';
 
 var DevopsCenter = {
-	CreateAction: function(name, assetType, endpointUrl, label, description){
-		name = name || "Get going";
+	CreateAction: function(name, assetType, triggerType, payload, description){
+		name = name || "Pipeline for Regression by SMA";
 		assetType = assetType || "Story";
-		label = label || "Start";
-		description = description || "Some text here.";
-		endpointUrl = endpointUrl || "http://www.mocky.io/v2/56ba439e130000e9087cdf39";
+		payload = payload || '{"definition":"Deploy to Staging","project":"test_project","group":"master"}';
+		description = description || "This was created to test starting a pipeline.";
+		triggerType = triggerType || 'TriggerType:240';
 
 		//data returned is only the attributes of the post data
 		var data = {
 			"Name": name,
 			"ValidForAssetType": assetType,
-			"EndpointURL": endpointUrl,
-			"Label": label,
+			"TriggerType": triggerType,
+			"Payload": payload,
 			"Description": description
 		};
 		return v1.create('ExternalAction', data);
@@ -89,33 +91,36 @@ var errorHandler = function(error) {
 	//console.error(error);
 };
 
-/*var externalActionOid = 1228;
-var name;
-var number;
-var assetType;
-var endpointUrl;
-var label;
-var description;
-var status;
-
-DevopsCenter.InvokeAction(externalActionOid, 'Story:1057')
-.then(function(result) {
-	console.log("Invoked ExternalAction successfully:", result);	
-})
-.catch(errorHandler);*/
-
-/*DevopsCenter.DeleteAction(externalActionOid)
-	.then(function(result) {
-		console.log(result);
-	})
-	.catch(errorHandler);*/
 
 
-/*DevopsCenter.CreateAction(name, assetType, endpointUrl, label, description)
-.then(function(result) {
-	console.log(result);
-})
-.catch(errorHandler);*/
+// var externalActionOid = 1222;
+// var name = "Pipeline for Regression by SMA";
+// var number;
+// var assetType = "Story";
+// var triggerType = 'TriggerType:240';
+// var triggeringAssetOid = 2214;
+// var payload = '{"definition":"Deploy to Staging","project":"test_project","group":"master"}';
+// var description = "This was created to test starting a pipeline.";
+// var status;
+
+// DevopsCenter.InvokeAction(externalActionOid, 'Story:1057')
+// .then(function(result) {
+// 	console.log("Invoked ExternalAction successfully:", result);	
+// })
+// .catch(errorHandler);
+
+// /*DevopsCenter.DeleteAction(externalActionOid)
+// 	.then(function(result) {
+// 		console.log(result);
+// 	})
+// 	.catch(errorHandler);*/
+
+
+// DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
+// .then(function(result) {
+// 	console.log(result);
+// })
+// .catch(errorHandler);
 
 //console.log(devOpsCenterApiBaseUrl);
 
