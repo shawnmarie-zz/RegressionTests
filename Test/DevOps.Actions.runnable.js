@@ -112,7 +112,7 @@ var errorHandler = function(error) {
 	//console.error(error);
 };
 
-var externalActionOid = 1222;
+var externalActionOid = 7851;
 var name = "Pipeline for Regression by SMA";
 var number;
 var assetType = "Story";
@@ -122,12 +122,15 @@ var payload = '{"definition":"Deploy to Staging","project":"test_project","group
 var description = "This was created to test starting a pipeline.";
 var status;
 
-
-DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
-.then(function(result) {
-	console.log(result);
-})
-.catch(errorHandler);
+// DevopsCenter.ReadActionInvocationCausedByAction(7905)
+// .then(function(result) {
+// 	console.log(result.data[0][0].InvokedOn._oid);
+// }).catch(errorHandler);
+// DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
+// .then(function(result) {
+// 	console.log(result);
+// })
+// .catch(errorHandler);
 
 
 // var checkForData = function(result) {
@@ -163,12 +166,16 @@ DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
 // })
 // .catch(errorHandler);
 
-
-// DevopsCenter.DeleteAction(externalActionOid)
+// DevopsCenter.InvokeAction(externalActionOid, 'Story:6474')
 // .then(function(result) {
-// 	console.log(result);
+// 	console.log("Invoked ExternalAction successfully:", result);	
 // })
 // .catch(errorHandler);
+DevopsCenter.DeleteAction(externalActionOid)
+.then(function(result) {
+	console.log(result);
+})
+.catch(errorHandler);
 
 /*module.exports = {
 	DevopsCenter: DevopsCenter,

@@ -31,7 +31,8 @@ var DevopsCenter = {
 		return v1.create('ExternalAction', data);
 	},
 	DeleteAction: function(externalActionOid) {
-		return v1.executeOperation('ExternalAction', externalActionOid, 'Delete');
+		var oidToken = 'ExternalAction:' + externalActionOid;
+		return v1.executeOperation(oidToken, 'Delete');
 	},
 	InvokeAction: function(externalActionOid, triggeringAssetOid, name, number, description, status) {
 		name = name || "Asset";
