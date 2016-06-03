@@ -1,5 +1,5 @@
 
-This repo currently contains files related to testing and regression testing **DeliveryStream** for **VersionOne**.
+This repo currently contains files related to regression testing **DeliveryStream** for **VersionOne**.
 
 After cloning this repo you will need to install the following (if you do not have them already):
 ****It is assumed that you already have node installed and working.****
