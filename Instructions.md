@@ -79,7 +79,6 @@ This test suite will exercise each Asset Type/Trigger Type pair for the followin
  - Read Action History 
  - Delete the newly created Action (clean up!)
 
-If the test.js execution was successful, you should see output like the following:
 	
 
 
