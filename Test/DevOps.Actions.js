@@ -79,50 +79,34 @@ var DevopsCenter = {
 
 		return axios.get(url);
 	},
-	ReadActionInvocationCausedByAssetType: function(assetType) {
+	ReadActionInvocationCausedByAction: function(externalActionOid) {
+		externalActionOid = externalActionOid || 2287;
+
+		var data = {
+			"from": "ExternalActionInvocation", 
+			"select": ["InvokedOn"], 
+			"where": {"CausedBy": "ExternalAction:" + externalActionOid}
+			};
+
+		return v1.query(data);
+	},
+	SelectExternalActionByValidForAssetType: function(assetType) {
 		assetType = assetType || 'Story';
-		
-		return v1.query('ExternalActionInvocation', assetType);
+
+		var data = {
+			"from": "ExternalAction", 
+			"select": [],
+			"where": {"ValidForAssetType": assetType, "TriggerType.Name": "Webhook"}
+		};
+
+		return v1.query(data);
 	}
 };
 
 var errorHandler = function(error) {
 	console.error(error, error.data.exceptions);
-	//console.error(error);
 };
 
-
-
-// var externalActionOid = 1222;
-// var name = "Pipeline for Regression by SMA";
-// var number;
-// var assetType = "Story";
-// var triggerType = 'TriggerType:240';
-// var triggeringAssetOid = 2214;
-// var payload = '{"definition":"Deploy to Staging","project":"test_project","group":"master"}';
-// var description = "This was created to test starting a pipeline.";
-// var status;
-
-// DevopsCenter.InvokeAction(externalActionOid, 'Story:1057')
-// .then(function(result) {
-// 	console.log("Invoked ExternalAction successfully:", result);	
-// })
-// .catch(errorHandler);
-
-// /*DevopsCenter.DeleteAction(externalActionOid)
-// 	.then(function(result) {
-// 		console.log(result);
-// 	})
-// 	.catch(errorHandler);*/
-
-
-// DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
-// .then(function(result) {
-// 	console.log(result);
-// })
-// .catch(errorHandler);
-
-//console.log(devOpsCenterApiBaseUrl);
 
 module.exports = {
 	DevopsCenter: DevopsCenter,
