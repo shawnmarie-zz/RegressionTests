@@ -103,6 +103,18 @@ var DevopsCenter = {
 		};
 
 		return v1.query(data);
+	},
+	SelectAssetIDByAssetTypeAndName: function(assetType, name) {
+		assetType = assetType || 'Scope';
+		name = name || 'Release 1.0';
+
+		var data = {
+			"from": assetType,
+			"select": ["ID"],
+			"where": {"Name": name}
+		};
+
+		return v1.query(data);
 	}
 };
 
@@ -113,9 +125,10 @@ var errorHandler = function(error) {
 };
 
 var externalActionOid = 7851;
-var name = "Pipeline for Regression by SMA";
+//var name = "Pipeline for Regression by SMA";
+var name = "Order Shipping";
 var number;
-var assetType = "Story";
+var assetType = "Epic";
 var triggerType = 'TriggerType:240';
 var triggeringAssetOid = 2214;
 var payload = '{"definition":"Deploy to Staging","project":"test_project","group":"master"}';
@@ -171,9 +184,15 @@ var status;
 // 	console.log("Invoked ExternalAction successfully:", result);	
 // })
 // .catch(errorHandler);
-DevopsCenter.DeleteAction(externalActionOid)
+// DevopsCenter.DeleteAction(externalActionOid)
+// .then(function(result) {
+// 	console.log(result);
+// })
+// .catch(errorHandler);
+
+DevopsCenter.SelectAssetIDByAssetTypeAndName(assetType, name)
 .then(function(result) {
-	console.log(result);
+	console.log(result.data[0][0]._oid);
 })
 .catch(errorHandler);
 

@@ -3,11 +3,11 @@
   var v1sdk = require('v1sdk');
   var util = require('util');
 
-  var hostname = "www8.v1host.com";
-  var instance = "ShawnMarie_DNTD";
+  var hostname = "localhost";
+  var instance = "versionone";
   var username = "admin";
   var password = "admin";
-  var protocol = "https";
+  var protocol = "http";
 
   var v1 = new v1sdk.V1Meta({
 	hostname: hostname,

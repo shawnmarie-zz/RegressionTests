@@ -101,6 +101,18 @@ var DevopsCenter = {
 		};
 
 		return v1.query(data);
+	},
+	SelectAssetIDByAssetTypeAndName: function(assetType, name) {
+		assetType = assetType || 'Scope';
+		name = name || 'Release 1.0';
+
+		var data = {
+			"from": assetType,
+			"select": ["ID"],
+			"where": {"Name": name}
+		};
+
+		return v1.query(data);
 	}
 };
 
