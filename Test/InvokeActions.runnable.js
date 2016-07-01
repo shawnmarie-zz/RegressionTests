@@ -9,6 +9,12 @@ var eh = actions.errorHandler;
 function getOid(oidToken) {
 	return oidToken.split(':')[1];
 }
+
+function itemID(asset) {
+	id = asset.data[0][0]._oid;
+	return id;
+}
+
 //Invoke an External Action for each Asset Type and Trigger Type combination
 console.log("Invoking External Action on a Project of Trigger Type Pipeline");
 var actionOidToken = dc.SelectExternalActionByValidForAssetType('Story')

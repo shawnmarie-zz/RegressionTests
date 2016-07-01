@@ -6,10 +6,10 @@ var util = require('util');
 var dc = actions.DevopsCenter;
 var eh = actions.errorHandler;
 
-var namePipeline = "Pipeline for Regression by SMA";
-var nameTask = "Task for Regression by SMA";
-var nameWebhook = "Webhook for Regression by SMA";
-var nameCanvas = "Canvas for Regression by SMA";
+var namePipeline = "Pipeline for Regression";
+var nameTask = "Task for Regression";
+var nameWebhook = "Webhook for Regression";
+var nameCanvas = "Canvas for Regression";
 
 var descriptionPipeline = "This was created to test starting a pipeline.";
 var descriptionTask = "This was created to test starting a task.";

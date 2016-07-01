@@ -139,11 +139,11 @@ var status;
 // .then(function(result) {
 // 	console.log(result.data[0][0].InvokedOn._oid);
 // }).catch(errorHandler);
-// DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
-// .then(function(result) {
-// 	console.log(result);
-// })
-// .catch(errorHandler);
+DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
+.then(function(result) {
+	console.log(result);
+})
+.catch(errorHandler);
 
 
 // var checkForData = function(result) {
@@ -190,11 +190,11 @@ var status;
 // })
 // .catch(errorHandler);
 
-DevopsCenter.SelectAssetIDByAssetTypeAndName(assetType, name)
-.then(function(result) {
-	console.log(result.data[0][0]._oid);
-})
-.catch(errorHandler);
+// DevopsCenter.SelectAssetIDByAssetTypeAndName(assetType, name)
+// .then(function(result) {
+// 	console.log(result.data[0][0]._oid);
+// })
+// .catch(errorHandler);
 
 /*module.exports = {
 	DevopsCenter: DevopsCenter,
