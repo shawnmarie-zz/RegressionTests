@@ -32,7 +32,7 @@ Additionally, an ExternalAction will be created on each V1 Asset Type for each *
  - Webhook 
  - Canvas
 
-To begin manual regression testing, DeliveryStream must be enabled with a valid Continuum Instance in your targeted VersionOne testing instance. Once DeliveryStream has been successfully enabled, return to the RegressionTests project. Open a cmd window and navigate to the Text directory. Type `node CreateRegressionActions.runnable.js`
+To begin manual regression testing, DeliveryStream must be enabled with a valid Continuum Instance in your targeted VersionOne testing instance. Once DeliveryStream has been successfully enabled, return to the RegressionTests project. Open a cmd window and navigate to the Test directory. Type `...RegressionTests\Test> node CreateRegressionActions.runnable.js`
 
 If successful, you should see output similar to this:
 
