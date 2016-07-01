@@ -10,6 +10,7 @@ After cloning this repo you will need to install the following (if you do not ha
     npm install chai
     npm install chai-as-promised
     npm install mocha
+    npm install
 
 Execution:
 ----------
