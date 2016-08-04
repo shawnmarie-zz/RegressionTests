@@ -15,7 +15,7 @@
     "request": "^2.69.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "mocha test.js"
   },
   "author": "sma",
   "license": "ISC"

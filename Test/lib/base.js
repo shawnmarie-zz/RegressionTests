@@ -3,8 +3,8 @@
   var v1sdk = require('v1sdk');
   var util = require('util');
 
-  var hostname = "qadotnet46";
-  var instance = "sql2016_Demo";
+  var hostname = "builds.versionone.net";
+  var instance = "PR_16.2.2.14765";
   var username = "admin";
   var password = "admin";
   var protocol = "http";

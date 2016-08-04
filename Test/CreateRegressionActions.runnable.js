@@ -11,9 +11,9 @@ var nameTask = "Task for Regression";
 var nameWebhook = "Webhook for Regression";
 var nameCanvas = "Canvas for Regression";
 
-var descriptionPipeline = "This was created to test starting a pipeline.";
-var descriptionTask = "This was created to test starting a task.";
-var descriptionWebhook = "This was created to test hitting a webhook.";
+var descriptionPipeline = "This was created to test initiating sma_pipeline.";
+var descriptionTask = "This was created to test starting RunTheWorld task.";
+var descriptionWebhook = "This was created to test hitting sma_test_webhook.";
 var descriptionCanvas = "This was created to test opening a canvas.";
 
 var assetType = dc.assetType;
@@ -23,9 +23,9 @@ var triggerTypeTask = 'TriggerType:241';
 var triggerTypeWebhook = 'TriggerType:242';
 var triggerTypeCanvas = 'TriggerType:243';
 
-var payloadPipeline = '{"definition":"Deploy to Staging","project":"test_project","group":"master"}';
-var payloadTask = '{"task":"Test_Task","initial_data":"{}"}';
-var payloadWebhook = '{"handler":"sma_test_webhook","smaStuff": "http://www.mocky.io/v2/571678901100005b2087da99"}';
+var payloadPipeline = '{"definition":"sma_pipeline","project":"test_project","group":"master"}';
+var payloadTask = '{"task":"RunTheWorld","initial_data":"{}"}';
+var payloadWebhook = '{"handler":"sma_test_webhook","smaStuff": "http://www.google.com"}';
 var payloadCanvas = '{"path": "demos/main/main.layout"}';
 
 var externalOid = 0;
