@@ -3,8 +3,8 @@
   var v1sdk = require('v1sdk');
   var util = require('util');
 
-  var hostname = "builds.versionone.net";
-  var instance = "PR_16.2.2.14765";
+  var hostname = "pfreiberg.cloudapp.net";
+  var instance = "VersionOneTechChore";
   var username = "admin";
   var password = "admin";
   var protocol = "http";
