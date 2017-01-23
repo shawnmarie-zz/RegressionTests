@@ -104,6 +104,9 @@ _TeamCity*
 # DotCover is a Code Coverage Tool
 *.dotCover
 
+# WebStorm
+.idea
+
 # NCrunch
 *.ncrunch*
 .*crunch*.local.xml
