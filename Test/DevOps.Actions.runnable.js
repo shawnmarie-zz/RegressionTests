@@ -142,6 +142,8 @@ var status;
 DevopsCenter.CreateAction(name, assetType, triggerType, payload, description)
 .then(function(result) {
 	console.log(result);
+	console.log("This is the Action Name: " + result.data.Attributes.Name);
+	console.log("This is the ValidForAssetType: " + result.data.Attributes.ValidForAssetType);
 })
 .catch(errorHandler);
 
